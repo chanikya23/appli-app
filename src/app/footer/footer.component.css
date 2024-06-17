@@ -1,0 +1,42 @@
+.footer{
+    margin-top: 10px;
+    color:white;
+}
+.footer span{
+    font-size: 20px;
+
+}
+.return{
+    text-align: center;
+    background-color:rgba(81, 81, 81, 0.768);
+    padding:5px;
+    color: white;
+}
+.return h4{
+    text-align: center;
+}
+.moreinfo{
+    background-color:  rgb(50, 48, 52);
+}
+.footer ul{
+    list-style: none;
+}
+.moreinfo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+}
+.span{
+    margin-left: 25px;
+}
+.footer .moreinfo div{
+    margin-top: 20px;
+}
+li{
+    line-height: 30px;
+}
+li:hover{
+    text-decoration: underline;
+        
+}

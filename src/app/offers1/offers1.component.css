@@ -1,0 +1,20 @@
+.offercard{
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.offercards {
+    display: flex;
+    gap:30px;
+    overflow-x:auto ;
+    margin-top: 20px;
+}
+img{
+    width: 250px;
+    height: 280px;
+    background-color: none;
+    border-radius: 20px;
+    padding:10px;
+}
+
+

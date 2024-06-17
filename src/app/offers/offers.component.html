@@ -1,0 +1,10 @@
+<marquee direction="left">
+    This is simple e-commerce application using the <i>angular v-16</i> & some of the <i>angular material</i> concepts.
+</marquee>
+<div class="container">
+  <div class="image-wrapper">
+    <button mat-button class="prev-button" (click)="prevImage()">&#9664;</button>
+    <img [src]="currentImage" alt="Offer Image">
+    <button mat-button class="next-button" (click)="nextImage()">&#9654;</button>
+  </div>
+</div>

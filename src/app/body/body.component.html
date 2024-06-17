@@ -1,0 +1,107 @@
+<!-- <div class="container">
+   <form (ngSubmit)="addProducts()" #productForm="ngForm" >
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" [(ngModel)]="newProduct.title" name="title" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>price</mat-label>
+      <input matInput placeholder="Price" [(ngModel)]="newProduct.price" name="price" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>category</mat-label>
+      <input matInput placeholder="Category" [(ngModel)]="newProduct.category" name="category" required>
+      <button mat-icon-button (click)="deleteProduct(newProduct.id)" class="cancel-button" >
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input matInput placeholder="Image URL" [(ngModel)]="newProduct.image" name="image" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>description</mat-label>
+      <textarea matInput placeholder="Description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form> 
+
+  <mat-card *ngFor ="let product of products" class="example-card">
+    <mat-card-header><h2>{{product.category | uppercase}}</h2>
+      <button mat-icon-button (click)="deleteProduct(product.id)" class="cancel-button">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-title>{{product.title}}</mat-card-title>
+    <h4 style="margin-left: 10px;">{{product.rating?.rate}}/5 rating</h4>
+    <img [src]=product.image alt="product image">
+    <mat-card-content>
+        <p class="description">
+          {{ product.description | slice:0:100 }}<span *ngIf="!product.showFullDescription">...</span>
+          <span *ngIf="product.showFullDescription">{{ product.description.slice(100) }}</span>
+        </p>
+        <button mat-button (click)="toggleDescription(product)">
+            {{ product.showFullDescription ? 'Show Less' : 'Show More' }}
+          </button>
+    </mat-card-content>
+    <mat-card-content><h1>{{product.price | currency:'INR'}}</h1></mat-card-content>
+    <button class="addtocart" mat-flat-button color="primary">Add to cart</button>
+  </mat-card>
+</div> -->
+<div class="container">
+  <form (ngSubmit)="addProducts()" #productForm="ngForm">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput placeholder="Title" [(ngModel)]="newProduct.title" name="title" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" [(ngModel)]="newProduct.price" name="price" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <input matInput placeholder="Category" [(ngModel)]="newProduct.category" name="category" required>
+      <button mat-icon-button type="button" (click)="clearFormFields()" class="cancel-button">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="rating" [(ngModel)]="newProduct.rating.rate" name="rating" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Image URL</mat-label>
+      <input matInput placeholder="Image URL" [(ngModel)]="newProduct.image" name="image" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput placeholder="Description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add Product</button>
+  </form> 
+
+  <mat-card *ngFor="let product of products" class="example-card">
+    <mat-card-header>
+      <h2>{{ product.category | uppercase }}</h2>
+      <button mat-icon-button (click)="deleteProduct(product.id)" class="cancel-button">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-card-header>
+    <mat-card-title>{{ product.title }}</mat-card-title>
+    <h4 style="margin-left: 10px;">{{ product.rating?.rate }} / 5 rating</h4>
+    <img [src]="product.image" alt="product image">
+    <mat-card-content>
+      <p class="description">
+        {{ product.description | slice: 0: 100 }}
+        <span *ngIf="!product.showFullDescription">...</span>
+        <span *ngIf="product.showFullDescription">{{ product.description.slice(100) }}</span>
+      </p>
+      <button mat-button (click)="toggleDescription(product)">
+        {{ product.showFullDescription ? 'Show Less' : 'Show More' }}
+      </button>
+    </mat-card-content>
+    <mat-card-content>
+      <h1>{{ product.price | currency: 'INR' }}</h1>
+    </mat-card-content>
+    <button class="addtocart" mat-flat-button color="primary">Add to cart</button>
+  </mat-card>
+</div>

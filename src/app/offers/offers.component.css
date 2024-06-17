@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width:20px;
+  position: absolute;
+  cursor: pointer;
+  top:50%;
+  transform: translate(-50%);
+  background-color: aliceblue;
+}
+button:hover{
+  border: 2px solid black;
+}
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+img {
+  max-width: 100%;
+  height: 100vh;
+}
+.prev-button {
+  left: 5%;
+}
+
+.next-button {
+  right: 10px;
+}
+marquee{
+  margin-top: 10px;
+  background-color: antiquewhite;
+  color:rgb(100, 154, 236);
+  font-size: 16px;
+  font-weight: bold;
+  padding:10px;
+}
+
+  
+
+
